@@ -1,0 +1,81 @@
+@keyframes animationOpac {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#opacity-animation {
+    animation: 0.5s animationOpac;
+}
+
+.login {
+    max-width: 450px;
+    background-color: #F6F1F1;
+    margin: 12% auto;
+    border-radius: 5px;
+    transition: 0.3s ease all;
+    height: 155px;
+    &.button-display {
+        height: 190px;
+    }
+    .container {
+        padding: 25px;
+        .form-group {
+            input[type="text"]::placeholder {
+                font-style: italic;
+            }
+            input[type="password"]::placeholder {
+                font-style: italic;
+            }
+            width: 75%;
+            .text {
+                width: 100%;
+                height: 30px;
+                background-color: inherit;
+                border-color: none;
+                border: none;
+                border-bottom: 1px solid #bbb;
+                outline: none;
+                margin-bottom: 20px;
+                &.password {
+                    border: none;
+                    width: 100%;
+                    margin-bottom: 0;
+                }
+            }
+            .password-container {
+                display: flex;
+                border-bottom: 1px solid #bbb;
+                width: 100%;
+                height: 100%;
+                .eye-button {
+                    background-color: inherit;
+                    outline: none;
+                    border: none;
+                    .icon {
+                        font-size: 18px;
+                        transition: width 1s;
+                    }
+                }
+            }
+        }
+        .login-button {
+            width: 150px;
+            height: 35px;
+            background-color: #609966;
+            margin-top: 30px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            transition: 0.7s ease all;
+            display: none;
+            &.display {
+                display: inline-block;
+            }
+        }
+    }
+}

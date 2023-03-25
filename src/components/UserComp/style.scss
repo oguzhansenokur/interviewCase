@@ -1,0 +1,28 @@
+.act-button {
+    width: 50%;
+}
+.delete-button {
+    background-image: url('../../img/icons8-close-30.png');
+    position: absolute;
+    background-size: contain;
+    top: 10px;
+    right: 5px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    width: 17px;
+    height: 17px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.rounded-left-bottom {
+    border-bottom-left-radius: 10px !important;
+    width: 50%;
+}
+
+.rounded-right-bottom {
+    border-bottom-right-radius: 5px !important;
+    width: 50%;
+}
