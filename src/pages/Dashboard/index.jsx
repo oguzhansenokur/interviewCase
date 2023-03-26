@@ -11,11 +11,13 @@ import AddTodoModal from '../../components/AddTodoModal/AddTodoModal'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ReactPaginate from 'react-paginate'
+import DeleteModal from '../../components/DeleteModal/DeleteModal'
 
 export default function Dashboard() {
     const users = useSelector((state)=> state.allUsers.users)
     const detailedUser = useSelector((state)=> state.detailedUserID.detailedUser)
     const addUserModal = useSelector((state) => state.addUserModalV.addUserModal);
+    const lastDeletedUserId = useSelector((state)=>state.lastDeletedUserID.lastDeletedUserId)
     const dispatch = useDispatch();
     const [loadStatus, setLoadStatus] = React.useState('loading')
     const fetchUsers = async (pageNumber) => {
@@ -26,7 +28,7 @@ export default function Dashboard() {
     }
     React.useEffect(() => {
         fetchUsers(0);
-    }, [detailedUser])
+    }, [detailedUser,lastDeletedUserId])
 
     const handleAddUserModal = () => {
       dispatch(setAddUserModalAction(true))
@@ -74,6 +76,7 @@ export default function Dashboard() {
           <ViewModal/>
           <ActModal/>
           <AddUserModal/>
+          <DeleteModal/>
           <ToastContainer />
       </div>
     </div>

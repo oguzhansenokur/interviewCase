@@ -146,7 +146,7 @@ export default function ActionModal({ type }) {
           <label >Gender</label>
           <select name="gender" onChange={handleChange} value={newData.gender} className='form-select' aria-label='Default select example'>
             <option value={currentData.gender} selected>{currentData.gender==='male' ? 'Male' : 'Female'}</option>
-            <option value={currentData.gender==='male' ? 'female' : 'male'}>{currentData.status==='male' ? 'Female' : 'Male' }</option>
+            <option value={currentData.gender==='male' ? 'female' : 'male'}>{currentData.gender==='male' ? 'Female' : 'Male' }</option>
           </select>
         </div>
         <div className='form-group'>

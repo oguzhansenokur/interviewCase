@@ -5,6 +5,10 @@ import { viewModalReducer } from "./viewModalReducer";
 import { detailedUserReducer } from "./detailedUserReducer";
 import {addUserReducer} from './addUserReducer'
 import { addTodoReducer } from "./addTodoReducer";
+import { deleteModalReducer } from "./deleteModalReducer";
+import { deleteUserReducer } from "./deleteUserReducer";
+import { addLastDeletedUserId } from "./addLastDeletedUserIdReducer";
+
 
  const reducers = combineReducers( {
     allUsers:usersReducer,
@@ -12,7 +16,10 @@ import { addTodoReducer } from "./addTodoReducer";
     viewModalV:viewModalReducer,
     detailedUserID:detailedUserReducer,
     addUserModalV:addUserReducer,
-    addTodoModalV:addTodoReducer
+    addTodoModalV:addTodoReducer,
+    deleteModalV:deleteModalReducer,
+    deleteUserID:deleteUserReducer,
+    lastDeletedUserID:addLastDeletedUserId
 })
 
 export default reducers
